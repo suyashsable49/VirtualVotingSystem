@@ -1,2 +1,2 @@
 # VirtualVotingSystem
-Mini Project
+Mini Project developed by SYBSCIT student
