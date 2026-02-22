@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Voter</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div id="clock"></div>
+
+    <!-- ADMIN SECURITY CHECK -->
+    <script>
+      if (localStorage.getItem("adminLoggedIn") !== "true") {
+        alert("Access Denied! Admin only");
+        window.location.href = "admin.html";
+      }
+    </script>
+    <form id="voterForm">
+      <h3>Register Voter</h3>
+      <label>Voter Name</label><br />
+      <input id="voterName" type="text" placeholder="Name" required />
+      <br /><br />
+
+      <label>Age</label><br />
+      <input id="age" type="number" placeholder="Age" required />
+      <br /><br />
+
+      <label>Gender</label><br />
+      <input type="radio" name="gender" value="Male" required /> Male
+      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+
+     
+
+      <button type="button" onclick="registerVoter()">Register Voter</button>
+    </form>
+<p id="generatedId"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

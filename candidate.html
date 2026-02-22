@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Candidate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="clock"></div>
+
+    <!-- ADMIN SECURITY -->
+    <script>
+      if (localStorage.getItem("adminLoggedIn") !== "true") {
+        alert("Access Denied! Admin only");
+        window.location.href = "admin.html";
+      }
+    </script>
+
+    <form id="candidateForm">
+      <h3>Register Candidate</h3>
+      <label>Title</label><br />
+      <select id="title" required>
+        <option value="">Select</option>
+        <option>Mr</option>
+        <option>Mrs</option>
+      </select>
+      <br /><br />
+
+      <label>Candidate Name</label><br />
+      <input
+        type="text"
+        id="candidateName"
+        placeholder="Candidate Name"
+        required
+      />
+      <br /><br />
+      <label>Gender</label>
+      <select id="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    
+      <br /><br />
+      <label>Date of birth</label><br />
+      <input type="date" id="DOB" placeholder="" required />
+      <br /><br />
+      <label style="opacity: 0.5;">Age</label><br />
+      <input
+        type="number"
+        id="age"
+        required
+        disabled
+      />
+      <br /><br />
+      <label>Party Name</label><br />
+      <input
+        type="text"
+        id="partyName"
+        placeholder="Enter Party Name"
+        required
+      />
+      <br /><br />
+
+      <button type="button" onclick="registerCandidate()">
+        Register Candidate
+      </button>
+    </form>
+
+    <!--MAIN JS FILE -->
+    <script src="script.js"></script>
+  </body>
+</html>

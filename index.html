@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Voting System</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <div id="navbar"></div>
+    <script>
+      fetch("navbar.html")
+      .then((r) => r.text())
+      .then((d) => {
+        document.getElementById("navbar").innerHTML = d;
+      });
+      </script>
+     
+  </body>
+</html>

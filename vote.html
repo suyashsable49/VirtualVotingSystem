@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="clock"></div>
+
+  <div class="vote-container">
+    <h2>Cast Your Vote</h2>
+
+    <input
+  type="number"id="voterIdInput"placeholder="Enter Voter ID"onblur="validateVoter()"/>
+
+
+    <div id="candidateList"></div>
+
+    <button onclick="castVote()">Submit Vote</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

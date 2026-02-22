@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Voting Results</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="clock"></div>
+
+
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+
+    <h2>Election Results</h2>
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
